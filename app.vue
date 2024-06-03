@@ -1,5 +1,7 @@
 <template>
-  <NuxtLayout name="default">
-    <NuxtPage />
-  </NuxtLayout>
+  <nuxt-layout name="default">
+    <nuxt-page />
+  </nuxt-layout>
+
+  <u-notifications />
 </template>
