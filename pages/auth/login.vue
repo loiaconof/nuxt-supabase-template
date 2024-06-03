@@ -19,7 +19,7 @@ const state = reactive({
 })
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  const { error } = await supabase.auth.signInWithPassword({
+  const { error } = await useSupabaseClient().auth.signInWithPassword({
     email: event.data.email,
     password: event.data.password,
   })
@@ -28,7 +28,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     console.error(error)
     return
   }
-  
+
   navigateTo('/')
 }
 </script>
