@@ -21,8 +21,23 @@ const state = reactive({
 })
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  navigateTo('/auth/login')
-}
+  const { error } = await useSupabaseClient().auth.signUp({
+    email: event.data.email,
+    password: event.data.password,
+    options: {
+      data: {
+        full_name: event.data.username,
+      },
+      emailRedirectTo: useRuntimeConfig().public.supabase.signUp.emailRedirectTo,
+    },
+  })
+
+  if (error) {
+    console.error(error)
+    return
+  }
+
+  navigateTo('/auth/login')}
 </script>
 
 <template>
