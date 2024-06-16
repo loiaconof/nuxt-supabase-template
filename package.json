@@ -9,14 +9,11 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "drizzle:generate": "drizzle-kit generate",
-    "drizzle:migrate": "drizzle-kit migrate"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/ui": "^2.16.0",
     "@nuxtjs/supabase": "^1.2.2",
-    "drizzle-orm": "^0.31.1",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
@@ -24,7 +21,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.20.0",
-    "drizzle-kit": "^0.22.2",
     "eslint": "^9.4.0"
   }
 }
