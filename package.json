@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prisma:seed": "node prisma/seed.ts",
-    "prisma:migrate": "cd ./prisma && npx prisma migrate dev"
+    "prisma:migrate": "cd ./prisma && npx prisma migrate dev",
+    "git:template:pull": "git fetch template && git merge template/master --allow-unrelated-histories"
   },
   "dependencies": {
     "@nuxt/ui": "^2.16.0",
