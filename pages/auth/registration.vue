@@ -2,10 +2,6 @@
 import { z } from 'zod'
 import type { FormSubmitEvent } from '#ui/types'
 
-definePageMeta({
-  layout: 'auth'
-})
-
 const schema = z.object({
   email: z.string().email('Invalid email'),
   password: z.string().min(8, 'Must be at least 8 characters'),
